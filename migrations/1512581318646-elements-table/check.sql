@@ -1,0 +1,2 @@
+-- 1512581318646-elements-table/check.sql
+-- optionally check your migration

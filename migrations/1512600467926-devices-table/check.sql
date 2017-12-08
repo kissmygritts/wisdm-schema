@@ -1,0 +1,2 @@
+-- 1512600467926-devices-table/check.sql
+-- optionally check your migration

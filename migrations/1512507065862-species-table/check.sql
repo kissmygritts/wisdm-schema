@@ -1,0 +1,2 @@
+-- 1512507065862-species-table/check.sql
+-- optionally check your migration

@@ -1,0 +1,36 @@
+-- 1512697765276-updated-at/up.sql
+-- write your new migration here
+
+CREATE OR REPLACE FUNCTION updated_at()
+RETURNS trigger AS
+$BODY$
+BEGIN
+
+IF NEW IS DISTINCT FROM OLD THEN
+  NEW.updated_at = now();
+END IF;
+
+RETURN NEW;
+
+END;
+$BODY$
+LANGUAGE plpgsql VOLATILE
+COST 100;
+
+CREATE TRIGGER update_timestamp BEFORE UPDATE ON species FOR EACH ROW EXECUTE PROCEDURE updated_at();
+CREATE TRIGGER update_timestamp BEFORE UPDATE ON activities FOR EACH ROW EXECUTE PROCEDURE updated_at();
+CREATE TRIGGER update_timestamp BEFORE UPDATE ON activity_species FOR EACH ROW EXECUTE PROCEDURE updated_at();
+CREATE TRIGGER update_timestamp BEFORE UPDATE ON activity_locations FOR EACH ROW EXECUTE PROCEDURE updated_at();
+CREATE TRIGGER update_timestamp BEFORE UPDATE ON elements FOR EACH ROW EXECUTE PROCEDURE updated_at();
+CREATE TRIGGER update_timestamp BEFORE UPDATE ON events FOR EACH ROW EXECUTE PROCEDURE updated_at();
+CREATE TRIGGER update_timestamp BEFORE UPDATE ON marks FOR EACH ROW EXECUTE PROCEDURE updated_at();
+CREATE TRIGGER update_timestamp BEFORE UPDATE ON devices FOR EACH ROW EXECUTE PROCEDURE updated_at();
+CREATE TRIGGER update_timestamp BEFORE UPDATE ON deployments FOR EACH ROW EXECUTE PROCEDURE updated_at();
+CREATE TRIGGER update_timestamp BEFORE UPDATE ON biometrics FOR EACH ROW EXECUTE PROCEDURE updated_at();
+CREATE TRIGGER update_timestamp BEFORE UPDATE ON injuries FOR EACH ROW EXECUTE PROCEDURE updated_at();
+CREATE TRIGGER update_timestamp BEFORE UPDATE ON lab_ids FOR EACH ROW EXECUTE PROCEDURE updated_at();
+CREATE TRIGGER update_timestamp BEFORE UPDATE ON medications FOR EACH ROW EXECUTE PROCEDURE updated_at();
+CREATE TRIGGER update_timestamp BEFORE UPDATE ON mortalities FOR EACH ROW EXECUTE PROCEDURE updated_at();
+CREATE TRIGGER update_timestamp BEFORE UPDATE ON necropsies FOR EACH ROW EXECUTE PROCEDURE updated_at();
+CREATE TRIGGER update_timestamp BEFORE UPDATE ON samples FOR EACH ROW EXECUTE PROCEDURE updated_at();
+CREATE TRIGGER update_timestamp BEFORE UPDATE ON vitals FOR EACH ROW EXECUTE PROCEDURE updated_at();

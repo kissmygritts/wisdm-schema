@@ -1,0 +1,2 @@
+-- 1512583287398-marks-table/check.sql
+-- optionally check your migration

@@ -1,0 +1,2 @@
+-- 1512697765276-updated-at/check.sql
+-- optionally check your migration

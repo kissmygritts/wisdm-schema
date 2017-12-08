@@ -1,0 +1,2 @@
+-- 1512689094255-biometrics/check.sql
+-- optionally check your migration

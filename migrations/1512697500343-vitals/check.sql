@@ -1,0 +1,2 @@
+-- 1512697500343-vitals/check.sql
+-- optionally check your migration

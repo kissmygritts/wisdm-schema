@@ -1,0 +1,2 @@
+-- 1512697331109-mort-necropsy/check.sql
+-- optionally check your migration

@@ -1,0 +1,2 @@
+-- 1512581525259-events-table/check.sql
+-- optionally check your migration

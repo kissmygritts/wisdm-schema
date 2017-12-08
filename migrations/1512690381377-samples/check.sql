@@ -1,0 +1,2 @@
+-- 1512690381377-labids/check.sql
+-- optionally check your migration
